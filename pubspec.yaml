@@ -29,6 +29,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  chat_gpt_sdk: ^2.0.0
   cloud_firestore: ^4.4.4
   cupertino_icons: ^1.0.2
   email_validator: ^2.1.17
@@ -40,6 +41,11 @@ dependencies:
   get: ^4.6.5
   google_nav_bar: ^5.0.6
   provider: ^6.0.5
+  webview_flutter: ^4.0.6
+chat_gpt_sdk:
+ git:
+    url: https://github.com/iampawan/Flutter-ChatGPT.git
+
 
 dev_dependencies:
   flutter_lints: ^2.0.0

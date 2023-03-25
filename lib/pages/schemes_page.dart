@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:heatlth1/theme/style.dart';
+import 'webviewpage.dart';
 
 class SchemesPage extends StatefulWidget {
   SchemesPage({Key? key}) : super(key: key);
@@ -40,10 +41,14 @@ class _SchemesPageState extends State<SchemesPage> {
                   width: w / 1.2,
                   padding: EdgeInsets.only(left: w / 20),
                   child: const Text(
-                      'Find government health care schemes in your location easily and avail them',style: TextStyle(fontSize:20),),
+                    'Find government health care schemes in your location easily and avail them',
+                    style: TextStyle(fontSize: 20),
+                  ),
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    const WebViewApp();
+                  },
                   icon: const Icon(Icons.arrow_forward),
                   color: apnaColor,
                 ),
@@ -54,17 +59,24 @@ class _SchemesPageState extends State<SchemesPage> {
                   height: h / 20,
                   width: w / 1.2,
                   padding: EdgeInsets.only(left: w / 20),
-                  child:
-                      const Text('Find medical camps and Janosadhi centers near you',style: TextStyle(fontSize:20)),
+                  child: const Text(
+                      'Find medical camps and Janosadhi centers near you',
+                      style: TextStyle(fontSize: 20)),
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    const WebViewApp();
+                  },
                   icon: const Icon(Icons.arrow_forward),
                   color: apnaColor,
                 ),
-                SizedBox(height: h/10,)
+                SizedBox(
+                  height: h / 10,
+                )
               ]),
-              SizedBox(height: h/10,)
+              SizedBox(
+                height: h / 10,
+              )
             ],
           )),
         ),

@@ -5,7 +5,7 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:heatlth1/pages/chatbot_page.dart';
 import 'package:heatlth1/theme/style.dart';
 import 'package:provider/provider.dart';
-
+import 'webviewpage.dart';
 import 'emergency_page.dart';
 import 'locate_test_page.dart';
 import 'my_home_page.dart';
@@ -34,16 +34,16 @@ class _HomePageState extends State<HomePage> {
     MyHomePage(),
     EmergencyPage(),
     LocateTestPage(),
-    ChatBotPage(),
-    SchemesPage(),
+    const ChatScreen(),
+    WebViewApp(),
   ];
   @override
   Widget build(BuildContext context) {
     double w = MediaQuery.of(context).size.width;
     double h = MediaQuery.of(context).size.height;
     return Scaffold(
-      body: Stack(
-        children: [Scaffold(
+      body: Stack(children: [
+        Scaffold(
           appBar: AppBar(
             // title:
             // Center(child:Column(
@@ -80,7 +80,8 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: apnaColor,
           bottomNavigationBar: Container(
             decoration: BoxDecoration(
-                color: Palette.kToDark, borderRadius: BorderRadius.circular(30)),
+                color: Palette.kToDark,
+                borderRadius: BorderRadius.circular(30)),
             margin: EdgeInsets.fromLTRB(15, 0, 15, 15),
             child: Padding(
               padding: EdgeInsets.all(10),
@@ -118,12 +119,11 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         Positioned(
-        top: 30,
-        right: w/3.2,
-        child: Image.asset('assets/mate4-removebg-preview.png',
-            height: 80),
-      ),]
-      ),
+          top: 30,
+          right: w / 3.2,
+          child: Image.asset('assets/mate4-removebg-preview.png', height: 80),
+        ),
+      ]),
     );
   }
 }
